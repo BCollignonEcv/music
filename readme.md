@@ -1,22 +1,85 @@
-# Music
+# Music News
 
-_Projet à rendre pour le 6 juin : 23h00_
 
-## Consigne
+## Pour lancer le projet :
 
-Créer le front d’un site de news sur la musique.
-Sur ce site on peut y trouver des news, les prochains concerts d’artistes et de groupe. Chaque artiste/groupe a une page
-dédiée où on peut voir ses albums et ses concerts. Sur la page artiste il y a une aussi une photo et une description. Côté
-back office, les utilisateurs admin pourront modifier les news, les artistes, les concerts et les albums. La page d'accueil du
-site affichera les dernières news et albums.
+```yarn install```
+```yarn serve # Pour lancer le front```
+```yarn server # Pour lancer le serveur```
 
-### Bonus
 
-Les internautes peuvent s’inscrire pour commenter les news et mettre des likes sur les artistes. La page d'accueil le top 5 des artistes les
-plus likés.
+## Serveur :
 
-- Gérer la recherche
-- Gérer la pagination
-- Utiliser ElementUI, Tailwind ou autre lib UI
-- Utiliser Nuxtjs
-- Utiliser Vuex
+Pour plus d'information sur le fonctionnement du serveur : https://github.com/typicode/json-server
+
+## [Pour se connecter sur le serveur](https://github.com/jeremyben/json-server-auth#authentication-flow-) :
+
+### Inscription
+
+Any of the following routes registers a new user :
+
+- **`POST /register`**
+- **`POST /signup`**
+- **`POST /users`**
+
+Les champs **`email`** et **`password`** sont requis dans le payload :
+
+```http
+POST /register
+{
+  "email": "olivier@mail.com",
+  "password": "bestPassw0rd"
+}
+```
+
+Le mot de passe est encrypté en [bcryptjs](https://github.com/dcodeIO/bcrypt.js).
+Une fois l'utilisateur inscrit, le serveur renvoie le JWT :
+
+```http
+201 Created
+{
+  "accessToken": "xxx.xxx.xxx"
+}
+```
+
+###### Ajouter d'autres informations
+
+Vous pouvez ajouter d'autres informations dans le payload
+
+```http
+POST /register
+{
+  "email": "olivier@mail.com",
+  "password": "bestPassw0rd",
+  "firstname": "Olivier",
+  "lastname": "Monge",
+  "age": 32
+}
+```
+
+
+### Login 🛂
+
+Vous pouvez vous logs sur les routes suivantes :
+
+- **`POST /login`**
+- **`POST /signin`**
+
+**`email`** et **`password`** sont obligatoires :
+
+```http
+POST /login
+{
+  "email": "olivier@mail.com",
+  "password": "bestPassw0rd"
+}
+```
+
+La response contient le JWT :
+
+```http
+200 OK
+{
+  "accessToken": "xxx.xxx.xxx"
+}
+```
