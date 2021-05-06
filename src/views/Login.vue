@@ -17,6 +17,7 @@
     </div>
       <button type="submit" class="btn btn-primary my-2" @click="submitLogin">Connexion</button>
     </form>
+    <p class="text-center mt-4 text-secondary">Vous n'avez pas encore de compte ? <a href="/register">Créer un compte</a></p>
       </div>
       <div class="col"></div>
     </div>

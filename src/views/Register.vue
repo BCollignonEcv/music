@@ -1,5 +1,6 @@
 <template>
   <div>
+  <header-app/>
     <h1> Inscription </h1>
     <label>Email</label>
     <input v-model="email"/>
@@ -18,7 +19,12 @@
 <script>
 import axios from 'axios'
 import jwt_decode from "jwt-decode"
+import Header from '@/components/Header'
+
 export default {
+  components: {
+    'header-app': Header,
+  },
   data () {
     return {
       email: null,
