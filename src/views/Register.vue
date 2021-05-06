@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     async submitForm () {
-      const res = await axios.post('http://localhost:3000/register', {
+      const res = await axios.post('http://localhost:3000/users', {
         email: this.email,
         password: this.password,
         firstname: this.firstname,
