@@ -9,6 +9,8 @@
     <input v-model="firstname"/>
     <label>Nom</label>
     <input v-model="lastname"/>
+    <label>Nom du groupe</label>
+    <input v-model="groupename"/>
     <button @click="submitForm">S'inscrire</button>
   </div>
 </template>
@@ -23,15 +25,17 @@ export default {
       password: null,
       firstname: null,
       lastname: null,
+      groupename: null,
     }
   },
   methods: {
     async submitForm () {
-      const res = await axios.post('http://localhost:3000/users', {
+      const res = await axios.post('http://localhost:3000/register', {
         email: this.email,
         password: this.password,
         firstname: this.firstname,
         lastname: this.lastname,
+        groupename: this.groupename,
       })
 
       const { accessToken } = res.data

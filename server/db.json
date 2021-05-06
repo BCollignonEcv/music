@@ -51,10 +51,17 @@
     },
     {
       "email": "collignonbaptiste@gmail.com",
-      "password": "tres",
+      "password": "$2a$10$qWv5ZuXMnq2aToZocyaNq.eGO3frtdqiVMPaMmF2yUehgnCwuZqSm",
       "firstname": "Baptiste",
       "lastname": "Collignon",
       "id": 9
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$AAStHjWd6nXn96p4.oCq5OZ7MXg1yWMq2L1Ak/IKHqhl0gkT9kcZ2",
+      "firstname": "ezaea",
+      "lastname": "eazea",
+      "id": 10
     }
   ],
   "news": [
