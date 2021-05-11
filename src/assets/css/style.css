@@ -1,0 +1,23 @@
+body {
+    background: #262626;
+    color: white;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ---login/register --- */
+.login-form,
+.register-form {
+    height: calc(100vh - var(--header-height));
+}
+.login-form .login,
+.register-form .register {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.login-nav-link,
+.register-nav-link {
+    font-size: 16px;
+}

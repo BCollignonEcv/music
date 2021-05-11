@@ -1,26 +1,27 @@
 <template>
   <div>
   <header-app/>
-    <div class="container">
-     <div class="row">
-     <div class="col"></div>
-     <div class="col-12 col-lg-5">
-      <h1 class="my-5"> Se connecter </h1>
-    <form>
-    <div class="form-group mb-3">
-      <label>Adresse mail</label>
-      <input type="email" class="form-control"  placeholder="Enter email" v-model="email"/>
-    </div>
-    <div class="form-group">
-      <label>Mot de Passe</label>
-      <input type="password" class="form-control" placeholder="Mot de passe" v-model="password"/>
-    </div>
-      <button type="submit" class="btn btn-primary my-2" @click="submitLogin">Connexion</button>
-    </form>
-    <p class="text-center mt-4 text-secondary">Vous n'avez pas encore de compte ? <a href="/register">Créer un compte</a></p>
+    <div class="container login-form">
+      <div class="row h-100">
+        <div class="col-4"></div>
+        <div class="col-12 col-lg-4 login">
+            <form>
+              <h1 class="mb-5"> Se connecter </h1>
+              <NeonTitle/>
+              <div class="form-group mb-3">
+                <label>Adresse mail</label>
+                <input type="email" class="form-control"  placeholder="Enter email" v-model="email"/>
+                </div>
+              <div class="form-group">
+                <label>Mot de Passe</label>
+                <input type="password" class="form-control" placeholder="Mot de passe" v-model="password"/>
+              </div>
+            <button type="submit" class="btn btn-primary my-3" @click="submitLogin">Connexion</button>
+            <p class="text-center mt-4 text-secondary">Vous n'avez pas encore de compte ? <a href="/register">Créer un compte</a></p>
+          </form>
+        </div>
+        <div class="col-4"></div>
       </div>
-      <div class="col"></div>
-    </div>
     </div>
   </div>
 </template>
