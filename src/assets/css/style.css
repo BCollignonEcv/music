@@ -21,3 +21,6 @@ a {
 .register-nav-link {
     font-size: 16px;
 }
+.login-form h1 {
+    text-align: center;
+}

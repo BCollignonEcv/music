@@ -5,6 +5,7 @@
       <div class="row h-100">
         <div class="col-4"></div>
         <div class="col-12 col-lg-4 login">
+            <logo-neon/>
             <form>
               <h1 class="mb-5"> Se connecter </h1>
               <NeonTitle/>
@@ -30,10 +31,12 @@
 import axios from 'axios'
 import jwt_decode from "jwt-decode"
 import Header from '@/components/Header'
+import LogoNeon from '@/components/LogoNeon'
 
 export default {
   components: {
     'header-app': Header,
+    'logo-neon': LogoNeon,
   },
   data () {
     return {
