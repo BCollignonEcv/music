@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Main from '@/views/Main'
 import Login from '@/views/Login'
 import Register from '@/views/Register'
+import Artistes from '../views/Artistes'
 
 import auth from '@/api/auth'
 
@@ -27,6 +28,13 @@ const router = new Router({
     {
       component: Register,
       path: '/register',
+    },
+    {
+      component: Artistes,
+      path: '/artistes',
+      meta: {
+        auth: true,
+      }
     }
   ]
 })

@@ -6,12 +6,14 @@
     <label>Password</label>
     <input type="password" v-model="password"/>
     <button @click="submitLogin">Connexion</button>
+    <button @click="register">S'inscrire</button>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import jwt_decode from "jwt-decode"
+import router from '@/router'
 export default {
   data () {
     return {
@@ -25,12 +27,21 @@ export default {
         email: this.email,
         password: this.password,
       })
-      const { accessToken } = res.data
+      
+      if (res) {
+        const { accessToken } = res.data
 
-      const { sub } = jwt_decode(accessToken)
+        const { sub } = jwt_decode(accessToken)
 
-      localStorage.setItem('vuejs_token', accessToken)
-      localStorage.setItem('vuejs_user_id', sub)
+        localStorage.setItem('vuejs_token', accessToken)
+        localStorage.setItem('vuejs_user_id', sub)
+
+        router.push('/')
+      }
+    },
+
+    register () {
+      router.push('/register')
     }
   }
 }

@@ -9,8 +9,6 @@
     <input v-model="firstname"/>
     <label>Nom</label>
     <input v-model="lastname"/>
-    <label>Nom du groupe</label>
-    <input v-model="groupename"/>
     <button @click="submitForm">S'inscrire</button>
   </div>
 </template>
@@ -18,6 +16,8 @@
 <script>
 import axios from 'axios'
 import jwt_decode from "jwt-decode"
+import router from '@/router'
+
 export default {
   data () {
     return {
@@ -25,7 +25,6 @@ export default {
       password: null,
       firstname: null,
       lastname: null,
-      groupename: null,
     }
   },
   methods: {
@@ -35,15 +34,18 @@ export default {
         password: this.password,
         firstname: this.firstname,
         lastname: this.lastname,
-        groupename: this.groupename,
       })
 
-      const { accessToken } = res.data
+      if (res) {
+        const { accessToken } = res.data
 
-      const { sub } = jwt_decode(accessToken)
+        const { sub } = jwt_decode(accessToken)
 
-      localStorage.setItem('vuejs_token', accessToken)
-      localStorage.setItem('vuejs_user_id', sub)
+        localStorage.setItem('vuejs_token', accessToken)
+        localStorage.setItem('vuejs_user_id', sub)
+
+        router.push('/')
+      }
     }
   }
 }
