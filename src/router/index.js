@@ -34,7 +34,6 @@ const router = new Router({
     {
       component: Artiste,
       path: '/artiste/:id',
-    }
     },
     // {
     //   component: Users,

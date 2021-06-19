@@ -75,13 +75,14 @@
       "password": "$2a$10$128UHyaHt24nM55cnUqJb.xaRfb/EWCPIxS6JHMxZz6XQ4f2U3/O2",
       "firstname": "Matthis",
       "lastname": "Louis-Mirtile",
+      "id": 12
     },
     {
       "email": "jeuxjouzes@gmail.com",
       "password": "$2a$10$.gbjj.zLG87SZ4figBzq..XW5xbyx5/o8/x1fH9SLqCpYz2.wddUm",
       "firstname": "Baptiste",
       "lastname": "Collignon",
-      "id": 12
+      "id": 13
     }
   ],
   "news": [
