@@ -13,7 +13,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import NewsList from '@/components/NewsList'
 import ConcertList from '@/components/ConcertList'
 import AlbumList from '@/components/AlbumList'
