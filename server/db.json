@@ -55,6 +55,20 @@
       "firstname": "Baptiste",
       "lastname": "Collignon",
       "id": 9
+    },
+    {
+      "email": "jeuxjoues@gmail.com",
+      "password": "$2a$10$CWq8.S0Tx2Qpm79KFsrI2u8c.PaAz8I9GOYL3EFRad/YNV3siRDym",
+      "firstname": "Baptiste",
+      "lastname": "Collignon",
+      "id": 10
+    },
+    {
+      "email": "jeuxjous@gmail.com",
+      "password": "$2a$10$yGE9QHEVcK02Wv56K1RuqOY62vNl7hntSVWDJ0CFXyGI/p42okvS.",
+      "firstname": "Baptiste",
+      "lastname": "Collignon",
+      "id": 11
     }
   ],
   "news": [

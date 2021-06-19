@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h2> Tous les utilisateurs </h2>
     <ul>
-      <li v-for="user in users" :key="user.email">
-        {{user.email}}
+      <li v-for="news_single in news" :key="news_single.title">
+        {{ news_single.title }}<br>
+        {{ news_single.content }}<br>
+        {{ news_single.published }}<br>
       </li>
     </ul>
   </div>
@@ -15,25 +16,24 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      users: [],
+      news: [],
     }
   },
   methods: {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
 
-      const res = axios.get('http://localhost:3000/users', {
+      const res = axios.get('http://localhost:3000/news', {
         headers: {
           Authorization: `Bearer ${token}`
         }
       })
       console.log(res)
-      this.users = res.data
+      this.news = res.data
     }
   },
   mounted () {
     this.fetchData()
-    console.log(this.users)
   }
 }
 </script>

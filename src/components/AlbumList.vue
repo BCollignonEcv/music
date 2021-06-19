@@ -1,11 +1,6 @@
 <template>
   <div>
-    <h2> Tous les utilisateurs </h2>
-    <ul>
-      <li v-for="user in users" :key="user.email">
-        {{user.email}}
-      </li>
-    </ul>
+    <h2> Tous les albums </h2>
   </div>
 </template>
 
@@ -15,25 +10,24 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      users: [],
+      albums: [],
     }
   },
   methods: {
     async fetchData () {
       const token = localStorage.getItem('vuejs_token')
 
-      const res = axios.get('http://localhost:3000/users', {
+      const res = axios.get('http://localhost:3000/albums', {
         headers: {
           Authorization: `Bearer ${token}`
         }
       })
       console.log(res)
-      this.users = res.data
+      this.albums = res.data
     }
   },
   mounted () {
     this.fetchData()
-    console.log(this.users)
   }
 }
 </script>
