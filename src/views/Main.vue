@@ -13,11 +13,13 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import NewsList from '@/components/NewsList'
 import ConcertList from '@/components/ConcertList'
 import AlbumList from '@/components/AlbumList'
 import ArtistList from '@/components/ArtistList'
-
+import UserList from '@/components/UserList'
+import Header from '@/components/Header'
 
 export default {
   components: {
@@ -25,6 +27,8 @@ export default {
     'concert-list': ConcertList,
     'album-list': AlbumList,
     'artist-list': ArtistList,
+     'user-list': UserList,
+    'header-app': Header,
   }
 }
 </script>
