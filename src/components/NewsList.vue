@@ -1,10 +1,10 @@
 <template>
   <div>
     <ul>
-      <li v-for="news_single in news" :key="news_single.title">
-        {{ news_single.title }}<br>
-        {{ news_single.content }}<br>
-        {{ news_single.published }}<br>
+      <li v-for="(single_news, index) in news" :key="index">
+        {{ single_news.title }}<br>
+        {{ single_news.published }}<br>
+        {{ single_news.content }}<br>
       </li>
     </ul>
   </div>
@@ -21,16 +21,9 @@ export default {
   },
   methods: {
     async fetchData () {
-      const token = localStorage.getItem('vuejs_token')
-
-      const res = axios.get('http://localhost:3000/news', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-      console.log(res)
-      this.news = res.data
-    }
+      axios.get('http://localhost:3000/news')
+        .then(res => (this.news = res.data))
+    },
   },
   mounted () {
     this.fetchData()

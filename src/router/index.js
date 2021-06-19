@@ -18,9 +18,6 @@ const router = new Router({
     {
       component: Main,
       path: '/',
-      meta: {
-        auth: true,
-      }
     },
     {
       component: Login,
@@ -33,14 +30,19 @@ const router = new Router({
     {
       component: Artistes,
       path: '/artistes',
-      meta: {
-        auth: true,
-      },
     },
     {
       component: Artiste,
       path: '/artiste/:id',
     }
+    },
+    // {
+    //   component: Users,
+    //   path: '/users',
+    //   meta: {
+    //     auth: true,
+    //   }
+    // }
   ]
 })
 
