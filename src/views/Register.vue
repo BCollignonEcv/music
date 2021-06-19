@@ -22,11 +22,11 @@
               </div>
               <div class="form-group mb-3">
                 <label>Nom</label>
-                <input type="email" class="form-control"  placeholder="Nom" v-model="lastname"/>
+                <input type="text" class="form-control"  placeholder="Nom" v-model="lastname"/>
               </div>
               <div class="form-group mb-3">
                 <label>Nom du groupe</label>
-                <input type="email" class="form-control"  placeholder="Prénom" v-model="groupename"/>
+                <input type="text" class="form-control"  placeholder="Prénom" v-model="groupename"/>
               </div>
             <button type="submit" class="btn btn-primary my-3" @click="submitForm">S'inscrire</button>
             <p class="text-center mt-4 text-secondary">Vous possédez déjà un compte ? <a href="/login">Se connecter</a></p>

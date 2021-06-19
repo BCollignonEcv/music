@@ -5,6 +5,12 @@ body {
 a {
     text-decoration: none;
     font-weight: bold;
+    color: #FF5F1F
+}
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF5F1F !important;
 }
 /* ---login/register --- */
 .login-form,
@@ -20,7 +26,19 @@ a {
 .login-nav-link,
 .register-nav-link {
     font-size: 16px;
+    color: #FF5F1F;
 }
 .login-form h1 {
     text-align: center;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #FF5F1F;
+    border-color: #FF5F1F;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #FF5F1F;
+    border-color: #FF5F1F;
 }

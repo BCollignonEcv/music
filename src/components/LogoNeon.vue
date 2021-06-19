@@ -19,6 +19,11 @@
 .logo b span:nth-of-type(2){
   animation: blink linear infinite 3s;
 }
+@media screen and (max-width:992px) {
+  .logo b{
+    font-size:4rem; 
+  }
+}
 @keyframes blink {
   78% {
     color: inherit;
