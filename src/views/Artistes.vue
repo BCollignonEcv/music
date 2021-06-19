@@ -1,27 +1,29 @@
 <template>
   <div>
-    <h1> Artiste </h1>
+    <div class="container">
+    <h1> Artiste</h1>
     <label>Nom du groupe ou de l'artiste</label>
     <input v-model="groupename"/>
     <label>Photo de profil</label>
-    <input v-model="profilpicture"/>
+    <input v-model="profilpicture" type="url"/>
     <label>Genres</label>
-    <select v-model="selectCountry">
-      <option disabled value="">Choisissez</option>
-      <option v-for="country in countries" :key="country.alpha2Code">
-        {{ country.name }}
-      </option>
-    </select>
-    <label>Pays</label>
     <select v-model="selectGenre">
       <option disabled value="">Choisissez</option>
       <option v-for="genre in genres" :key="genre.id">
         {{ genre.name }}
       </option>
     </select>
+    <label>Pays</label>
+    <select v-model="selectCountry">
+      <option disabled value="">Choisissez</option>
+      <option v-for="country in countries" :key="country.alpha2Code">
+        {{ country.name }}
+      </option>
+    </select>
     <label>Description de l'artiste</label>
     <textarea v-model="description"></textarea>
-    <button @click="submitForm">S'inscrire</button>
+    <button @click="submitForm">Enregister l'artiste</button>
+    </div>
   </div>
 </template>
 

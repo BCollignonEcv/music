@@ -1,6 +1,17 @@
 <template>
   <div>
   <header-app/>
+  <div>
+  <logo-neon/>
+    <h1> Login </h1>
+    <label>Login</label>
+    <input v-model="email"/>
+    <label>Password</label>
+    <input type="password" v-model="password"/>
+    <button @click="submitLogin">Connexion</button>
+    <button @click="register">S'inscrire</button>
+  </div>
+  <!--
     <div class="container login-form">
       <div class="row h-100">
         <div class="col-4"></div>
@@ -24,6 +35,7 @@
         <div class="col-4"></div>
       </div>
     </div>
+    -->
   </div>
 </template>
 

@@ -5,6 +5,7 @@ import Main from '@/views/Main'
 import Login from '@/views/Login'
 import Register from '@/views/Register'
 import Artistes from '../views/Artistes'
+import Artiste from '../views/Artiste'
 
 import auth from '@/api/auth'
 
@@ -34,7 +35,11 @@ const router = new Router({
       path: '/artistes',
       meta: {
         auth: true,
-      }
+      },
+    },
+    {
+      component: Artiste,
+      path: '/artiste/:id',
     }
   ]
 })

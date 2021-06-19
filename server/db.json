@@ -69,6 +69,13 @@
       "firstname": "Baptiste",
       "lastname": "Collignon",
       "id": 11
+    },
+    {
+      "email": "matthislm@hotmail.com",
+      "password": "$2a$10$128UHyaHt24nM55cnUqJb.xaRfb/EWCPIxS6JHMxZz6XQ4f2U3/O2",
+      "firstname": "Matthis",
+      "lastname": "Louis-Mirtile",
+      "id": 12
     }
   ],
   "news": [
