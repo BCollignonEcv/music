@@ -1,5 +1,10 @@
 <template>
   <div>
+    <li v-for="(concert, index) in concerts" :key="index">
+      {{ concert.name }}<br>
+      {{ concert.date }}<br>
+      {{ concert.artistId }}<br>
+    </li>
   </div>
 </template>
 
@@ -14,15 +19,8 @@ export default {
   },
   methods: {
     async fetchData () {
-      const token = localStorage.getItem('vuejs_token')
-
-      const res = axios.get('http://localhost:3000/concerts', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-      console.log(res)
-      this.concerts = res.data
+      axios.get('http://localhost:3000/concerts')
+        .then(res => (this.concerts = res.data))
     }
   },
   mounted () {

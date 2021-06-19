@@ -1,6 +1,12 @@
 <template>
   <div>
     <h2> Tous les albums </h2>
+    <li v-for="(album, index) in albums" :key="index">
+      {{ album.name }}<br>
+      {{ album.released }}<br>
+      {{ album.tracks }}<br>
+      {{ album.artistId }}<br>
+    </li>
   </div>
 </template>
 
@@ -15,15 +21,8 @@ export default {
   },
   methods: {
     async fetchData () {
-      const token = localStorage.getItem('vuejs_token')
-
-      const res = axios.get('http://localhost:3000/albums', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
-      console.log(res)
-      this.albums = res.data
+      axios.get('http://localhost:3000/albums')
+        .then(res => (this.albums = res.data))
     }
   },
   mounted () {

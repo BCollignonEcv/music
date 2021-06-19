@@ -69,6 +69,13 @@
       "firstname": "Baptiste",
       "lastname": "Collignon",
       "id": 11
+    },
+    {
+      "email": "jeuxjouzes@gmail.com",
+      "password": "$2a$10$.gbjj.zLG87SZ4figBzq..XW5xbyx5/o8/x1fH9SLqCpYz2.wddUm",
+      "firstname": "Baptiste",
+      "lastname": "Collignon",
+      "id": 12
     }
   ],
   "news": [
