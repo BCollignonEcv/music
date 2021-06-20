@@ -17,72 +17,46 @@
       "id": 3
     },
     {
-      "email": "toto@gmail.com",
-      "password": "$2a$10$e/W.8lOkX9mwydK.XcDJOu8f2mv5MWlI4rISDJ0DqPRVufnoNU5va",
-      "firstname": "louis",
-      "lastname": "harang",
+      "email": "test@test.com",
+      "password": "$2a$10$LFyr/p3zZ18zoptblWOdGOLpNiRwpDPDlW9AHBhwH.05xCGdTM./e",
+      "firstname": "Test",
+      "lastname": "Bob",
       "id": 4
     },
     {
-      "email": "qzdqzzqd@gmail.com",
-      "password": "$2a$10$jyxLSUpYvndAQZ.AONsvxujCVFwnA/Mu3CUP1WCJ2p2PsA5J20XXW",
-      "firstname": "qdqzdzq",
-      "lastname": "qzdzdq",
+      "email": "redo@test.com",
+      "password": "$2a$10$R2Mgq8YvTPryxTo06QwwfeKoRqHR7eoGm.YKYY3nXpqA9d4aJPzXS",
+      "firstname": "tet",
+      "lastname": "tetaezae",
       "id": 5
     },
     {
-      "email": "qdqzdqzd@gmail.com",
-      "password": "$2a$10$pF1M3TQqME.vwcDorQWNIujtG31yx6ZpwExZ5uR0i.3ogfIwA35ua",
-      "firstname": "qdqzdq",
-      "lastname": "qzdqzd",
+      "email": "jetest@test.com",
+      "password": "$2a$10$rb7Pm7hm7rLHJkTF4M85tOlvEqRQSvccWu8lO/3gU63Yz/i4Kx/M.",
+      "firstname": "Test",
+      "lastname": "Test",
       "id": 6
     },
     {
-      "email": "qzdqqz@gmail.com",
-      "password": "$2a$10$DKFeGxRnahYPul1GoKQslOHywSZq3ywtcV54VQazgSZUt5jgQ0mMa",
-      "firstname": "qzdqzd",
-      "lastname": "qzdzq",
+      "email": "eae@test.com",
+      "password": "$2a$10$acEM3Hj2XHio68WEhPcwuOiZCFFb5ET.aFL4YuBCh0yvEzGpjC.vy",
+      "firstname": "test",
+      "lastname": "test",
       "id": 7
     },
     {
-      "email": "admin2@gmail.com",
-      "password": "$2a$10$v4vUb8M0Igq4Xm/aX.RALOAv.BN0v3NIfp.SiDngdyLqIEnWC8AYK",
+      "email": "eaeazee@test.com",
+      "password": "$2a$10$vIZBsWtVQEjpVsBLzcCBle90rFwdPkRMba/IZdXqJOWtVgEItMSbK",
+      "firstname": "test",
+      "lastname": "test",
       "id": 8
     },
     {
-      "email": "collignonbaptiste@gmail.com",
-      "password": "$2a$10$y8IZsZt.vTBgwe6ppL1cJuhuSE.m8ayiR3mdChdcQKNzKiT.XgCvK",
-      "firstname": "Baptiste",
-      "lastname": "Collignon",
+      "email": "eazea@test.com",
+      "password": "$2a$10$phG5WIVPMQnTzHLUwicaueFb/B1vNPIdfJsWx21A1ZvN05ewYg9Ci",
+      "firstname": "Test",
+      "lastname": "TESTaze",
       "id": 9
-    },
-    {
-      "email": "jeuxjoues@gmail.com",
-      "password": "$2a$10$CWq8.S0Tx2Qpm79KFsrI2u8c.PaAz8I9GOYL3EFRad/YNV3siRDym",
-      "firstname": "Baptiste",
-      "lastname": "Collignon",
-      "id": 10
-    },
-    {
-      "email": "jeuxjous@gmail.com",
-      "password": "$2a$10$yGE9QHEVcK02Wv56K1RuqOY62vNl7hntSVWDJ0CFXyGI/p42okvS.",
-      "firstname": "Baptiste",
-      "lastname": "Collignon",
-      "id": 11
-    },
-    {
-      "email": "matthislm@hotmail.com",
-      "password": "$2a$10$128UHyaHt24nM55cnUqJb.xaRfb/EWCPIxS6JHMxZz6XQ4f2U3/O2",
-      "firstname": "Matthis",
-      "lastname": "Louis-Mirtile",
-      "id": 12
-    },
-    {
-      "email": "jeuxjouzes@gmail.com",
-      "password": "$2a$10$.gbjj.zLG87SZ4figBzq..XW5xbyx5/o8/x1fH9SLqCpYz2.wddUm",
-      "firstname": "Baptiste",
-      "lastname": "Collignon",
-      "id": 13
     }
   ],
   "news": [

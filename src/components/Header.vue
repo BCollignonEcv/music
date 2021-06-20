@@ -18,22 +18,45 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark header-app">
-    <a class="navbar-brand" href="#">LastMusic</a>
+    <a class="navbar-brand" href="/">LastMusic</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="/artists">Artistes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" v-bind:href="url" >News</a>
+        <a class="nav-link" href="/news" >News</a>
       </li>
     </ul>
   </div>
-   <a class="nav-link login-nav-link" href="#">Login/Register</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+   <a v-if="logged" class="nav-link login-nav-link" href="/admin">Admin</a>
+   <a v-else class="nav-link login-nav-link" href="/login">Login/Register</a>
     </nav>
   </header>
 </template>
+
+<script>
+import auth from '@/api/auth'
+
+export default {
+  data () {
+    return {
+      logged: false,
+    }
+  },
+  methods: {
+    checkLoggedIn () {
+      try {
+        auth.get(`/users/${localStorage.getItem('vuejs_user_id')}`)
+        this.logged = true
+      } catch (e) {
+        this.logged = false
+      }
+    }
+  },
+  beforeMount () {
+    this.checkLoggedIn()
+  }
+}
+</script>
 

@@ -4,8 +4,10 @@ import Vue from 'vue'
 import Main from '@/views/Main'
 import Login from '@/views/Login'
 import Register from '@/views/Register'
-import Artists from '../views/Artists'
-import Artist from '../views/Artist'
+import Artists from '@/views/Artists'
+import Artist from '@/views/Artist'
+import News from '@/views/News'
+import Admin from '@/views/Admin'
 
 import auth from '@/api/auth'
 
@@ -34,6 +36,17 @@ const router = new Router({
     {
       component: Artist,
       path: '/artist/:id',
+    },
+    {
+      component: News,
+      path: '/news',
+    },
+    {
+      component: Admin,
+      path: '/admin',
+      meta: {
+        auth: true,
+      }
     },
     // {
     //   component: Users,

@@ -1,33 +1,43 @@
 <template>
 <div>
   <header-app/>
-  <div class="container pt-5">
-    <div class="flex">
-        <div v-for="(artist, index) in artists" :key="index">
-            <div class="artist-picture mb-4 mx-3" v-bind:style="{ 'background-image': 'url(' + artist.avatar + ')' }"></div>
-            <h3>{{artist.name}}</h3>
-        </div>
-    </div>
-  </div>
+  <artist-list/>
 </div>
 </template>
+
+<style>
+
+.artist .title{
+    text-align: center;
+}
+
+</style>
 
 <script>
 import Header from '@/components/Header'
 import axios from 'axios'
+import ArtistList from '../components/ArtistList.vue'
 
 export default {
   components: {
     'header-app': Header,
+    'artist-list': ArtistList,
   },
+  props: ['limit'],
   data () {
     return {
       artists: [],
+      numberLimit: this.limit,
     }
   },
   methods: {
     async fetchData () {
-      axios.get('http://localhost:3000/artists')
+      var url = 'http://localhost:3000/artists?_sort=date'
+      if (this.numberLimit) {
+        url = url + '&_limit=' + this.numberLimit
+      }
+      console.log(url)
+      axios.get(url)
         .then(res => (this.artists = res.data))
     },
   },

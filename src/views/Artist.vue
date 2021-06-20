@@ -6,7 +6,7 @@
         <div class="artist-picture mb-4 mx-3" v-bind:style="{ 'background-image': 'url(' + artist.avatar + ')' }"></div>
         <h1>{{artist.name}}</h1>
         <h3>Genre : {{artist.genreId}}</h3>
-        <h3>Pays : {{artist.country}}</h3>
+        <h3>Pays : {{artist.origin}}</h3>
         <h3>Like : {{artist.likes}}</h3>
 
         <a data-toggle="collapse" href="#collapseDescritpion" role="button" aria-expanded="false" aria-controls="collapseDescritpion">

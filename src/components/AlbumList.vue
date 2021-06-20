@@ -24,8 +24,13 @@ export default {
   },
   methods: {
     async fetchData () {
-      axios.get('http://localhost:3000/albums?artistId=' + this.$route.params.id)
-        .then(res => (this.albums = res.data))
+      if (this.$route.params.id) {
+        axios.get('http://localhost:3000/albums?artistId=' + this.$route.params.id)
+          .then(res => (this.albums = res.data))
+      } else {
+        axios.get('http://localhost:3000/albums')
+          .then(res => (this.albums = res.data))
+      }
     }
   },
   mounted () {

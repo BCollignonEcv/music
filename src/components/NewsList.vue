@@ -1,14 +1,21 @@
 <template>
   <div>
-    <ul>
-      <li v-for="(single_news, index) in news" :key="index">
-        {{ single_news.title }}<br>
-        {{ single_news.published }}<br>
-        {{ single_news.content }}<br>
-      </li>
-    </ul>
+    <div class="news" v-for="(single_news, index) in news" :key="index">
+      <div class="flex justify-between">
+        <h3>{{ single_news.title }}</h3>
+        <p>{{ single_news.published }}</p>
+      </div>
+      <hr>
+      {{ single_news.content }}<br>
+    </div>
   </div>
 </template>
+
+<style>
+  .news{
+    margin-top: 24px;
+  }
+</style>
 
 <script>
 import axios from 'axios'
