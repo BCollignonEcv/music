@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <div v-show="albums.length > 0">
     <h2> Tous les albums </h2>
-    <li v-for="(album, index) in albums" :key="index">
-      {{ album.name }}<br>
-      {{ album.released }}<br>
-      {{ album.tracks }}<br>
-      {{ album.artistId }}<br>
-    </li>
+    <div id="albumList" class="flex flex-item">
+      <div class="card-item" v-for="(album, index) in albums" :key="index">
+        <h4 class="card-title">{{album.name}}</h4>
+        <hr>
+        <p>Date de sortie : {{ album.released }}</p>
+        <p>Nombre de tracks : {{ album.tracks }}</p>
+      </div>
+    </div>
+    <hr>
   </div>
 </template>
 
@@ -21,7 +24,7 @@ export default {
   },
   methods: {
     async fetchData () {
-      axios.get('http://localhost:3000/albums')
+      axios.get('http://localhost:3000/albums?artistId=' + this.$route.params.id)
         .then(res => (this.albums = res.data))
     }
   },

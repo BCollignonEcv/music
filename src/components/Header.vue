@@ -22,10 +22,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Lien</a>
+        <a class="nav-link" href="/artists">Artistes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" >Lien</a>
+        <a class="nav-link" v-bind:href="url" >News</a>
       </li>
     </ul>
   </div>
